@@ -1,0 +1,11 @@
+# Ignore everthing
+*
+
+# Except these following:
+# Source file
+!*.h
+!*.cpp
+# Directories
+!*/
+!.gitignore
+!README.md
