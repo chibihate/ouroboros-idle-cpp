@@ -1,9 +1,9 @@
 #include <iostream>
-#include "core/common/Human.cpp"
+#include "core/character/Human.cpp"
 
 int main()
 {
-    Human human(Interface::GenderInterface::eGender::male);
+    Core::Character::Human human(Interface::GenderBase::eGender::male);
     std::cout << "Welcome to ouroboros!" << std::endl;
     std::cout << human.getGender() << std::endl;
     return 0;
