@@ -1,10 +1,14 @@
 #include <iostream>
-#include "Human.h"
+#include "Hero.h"
 
 int main()
 {
-    Core::Human human(Interface::GenderBase::eGender::male);
+    Hero hero1;
+    Hero hero2;
+    Hero hero3;
+    std::cout << hero1.getId() << std::endl;
+    std::cout << hero2.getId() << std::endl;
+    std::cout << hero3.getId() << std::endl;
     std::cout << "Welcome to ouroboros!" << std::endl;
-    std::cout << human.getGender() << std::endl;
     return 0;
 }
