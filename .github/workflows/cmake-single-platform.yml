@@ -36,6 +36,7 @@ jobs:
   
   test:
     runs-on: ubuntu-latest
+    needs: build
     steps:
     - name: unittest
       working-directory: ${{github.workspace}}/build/test
