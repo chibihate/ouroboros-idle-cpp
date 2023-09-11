@@ -4,7 +4,7 @@ set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED TRUE)
 set(CMAKE_CXX_FLAGS "-g -O0 -Wall -fprofile-arcs -ftest-coverage")
 
-project(Ouroboros_Idle)
+project(src)
 
 set(SOURCE 
     ${CMAKE_CURRENT_SOURCE_DIR}/Hero.cpp

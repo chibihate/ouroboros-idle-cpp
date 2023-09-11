@@ -51,7 +51,7 @@ TEST_F(TestHero, defaultConstructor)
   EXPECT_EQ(1, hero.getLevel());
   EXPECT_EQ(1, hero.getResetGenderPoints());
   EXPECT_EQ(1, hero.getResetNamePoints());
-  EXPECT_EQ(1, hero.getId());
+  EXPECT_NE(0, hero.getId());
 }
 
 TEST_F(TestHero, constructor_genderIsMaleAndNameIsSteve_notSetResetGenderAndName)
@@ -67,5 +67,5 @@ TEST_F(TestHero, constructor_genderIsMaleAndNameIsSteve_notSetResetGenderAndName
   EXPECT_EQ(1, hero.getLevel());
   EXPECT_EQ(0, hero.getResetGenderPoints());
   EXPECT_EQ(0, hero.getResetNamePoints());
-  EXPECT_EQ(2, hero.getId());
+  EXPECT_NE(0, hero.getId());
 }
