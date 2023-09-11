@@ -42,5 +42,5 @@ jobs:
     - name: Generate a code coverage report
       uses: threeal/gcovr-action@latest
       with:
-        excludes:
-          ${{github.workspace}}/test/*
+        exclude:
+          test/*
