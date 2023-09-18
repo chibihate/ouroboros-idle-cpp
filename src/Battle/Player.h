@@ -3,10 +3,13 @@
 
 #include <memory>
 #include <vector>
-#include "Hero.h"
+#include "Creature/Hero.h"
 
 class Player
 {
+public:
+    Player();
+    ~Player();
 protected:
     // Player gender
     eGender m_gender;
@@ -15,7 +18,7 @@ protected:
     // Player level
     unsigned int m_level;
     // Player golds
-    unsigned m_golds;
+    unsigned int m_golds;
     // Hero of the player
     std::unique_ptr<Hero> m_hero;
     // Team of the player

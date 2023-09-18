@@ -8,7 +8,15 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_FLAGS "-g -O0 -Wall -fprofile-arcs -ftest-coverage")
 
 set(SOURCE
-    ${src_SOURCE_DIR}/Hero.cpp
+    ${src_SOURCE_DIR}/Common/Gender.cpp
+    ${src_SOURCE_DIR}/Creature/Creature.cpp
+    ${src_SOURCE_DIR}/Creature/Hero.cpp
+)
+
+set(HEADER
+    ${src_SOURCE_DIR}/Common/Gender.h
+    ${src_SOURCE_DIR}/Creature/Creature.h
+    ${src_SOURCE_DIR}/Creature/Hero.h
 )
 
 set(TEST_FILE
@@ -19,6 +27,7 @@ include_directories(${src_SOURCE_DIR})
 
 add_executable(
   unittest
+  ${HEADER}
   ${SOURCE}
   ${TEST_FILE}
 )

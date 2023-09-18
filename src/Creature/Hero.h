@@ -1,36 +1,21 @@
+#pragma once
 #ifndef HERO_H
 #define HERO_H
 
-#include <string>
+#include "Creature.h"
 
-// Define enum
-enum eGender
-{
-    female,
-    male
-};
+#define INITIALIZE_HERO_HEALTH_POINTS 100
+#define INITIALIZE_HERO_ATTACK_POINTS 15
+#define INITIALIZE_HERO_DEFENSE_POINTS 5
 
-class Hero
+class Hero : public Creature
 {
 private:
-    eGender m_gender;
-    std::string m_name;
-    unsigned int m_healthPoints;
-    unsigned int m_attackPoints;
-    unsigned int m_defensePoints;
-    unsigned int m_expPoints;
-    unsigned int m_level;
-    unsigned char m_resetGenderPoints;
-    unsigned char m_resetNamePoints;
     unsigned int m_id;
 public:
     Hero();
     Hero(eGender _gender, std::string _name);
     ~Hero();
-    void setGender(eGender _gender);
-    eGender getGender() const;
-    void setName(std::string _name);
-    std::string getName() const;
     void addHealthPoints(unsigned int _healthPoints);
     void subHealthPoints(unsigned int _healthPoints);
     unsigned int getHealthPoints() const;
@@ -46,12 +31,6 @@ public:
     void addLevel(unsigned int _level);
     void subLevel(unsigned int _level);
     unsigned int getLevel() const;
-    void addResetGenderPoints(unsigned char _resetGenderPoints);
-    void subResetGenderPoints(unsigned char _resetGenderPoints);
-    unsigned char getResetGenderPoints() const;
-    void addResetNamePoints(unsigned char _resetNamePoints);
-    void subResetNamePoints(unsigned char _resetNamePoints);
-    unsigned char getResetNamePoints() const;
     void setId();
     unsigned int getId() const;
 };
